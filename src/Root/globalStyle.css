@@ -7,7 +7,7 @@
   }
   
   body {
-    background-image: url(./img/Background.avif);
+    background-image: url(/assets/images/Background.avif);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
