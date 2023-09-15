@@ -1,6 +1,7 @@
 const DEFAULT_VALUE = "--";
 const searchInput = document.getElementById("search-input");
 const movieImage = document.querySelector(".movie-image");
+const movieName = document.querySelector(".movie-name")
 
 const url = "https://imdb8.p.rapidapi.com/title/find?q=spiderman";
 const options = {
@@ -24,6 +25,15 @@ searchInput.addEventListener("change", (event) => {
       for (let i = 0; i < length; i++) {
         types.push(data.results[0].image.url);
       }
-	  movieImage.src = (types) || DEFAULT_VALUE
+      console.log(types)
+      movieImage.src = types || DEFAULT_VALUE;
+      movieName.innerHTML = data.results[0].title
+
+
+      // const {results} = data;
+      // for (let i = 0; i < results.length; i++) {
+      //   console.log(results[i])
+      //   movieImage.src = results[i].image.url
+      // }
     });
 });

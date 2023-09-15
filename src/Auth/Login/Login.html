@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="form_Login">
+        <div class="title_from_login">
+          <h3>Đăng nhập</h3>
+          <p>
+            Chưa có tài khoản?
+            <a href="../Register/Register.html" class="Create_now">Tạo Ngay</a>
+          </p>
+        </div>
+        <div class="form_item_login">
+          <div class="form_item email_item">
+            <p>Email</p>
+            <input id="email_input" type="email" placeholder="Nhập Email" />
+            <p id="error_email_noti">Error Text</p>
+          </div>
+          <div class="form_item password_item">
+            <p>Password</p>
+            <input
+              id="password_input"
+              type="password"
+              placeholder="Nhập password"
+            />
+            <p id="error_password_noti">Error Text</p>
+          </div>
+          <a id="linkHome" href="#"
+            ><button type="submit" onclick="validation()">Login</button></a
+          >
+        </div>
+        <p>Quên mật khẩu?</p>
+        <p>
+          <a class="Create_now" href="/src/Root/index.html">Trở về trang chủ</a>
+        </p>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

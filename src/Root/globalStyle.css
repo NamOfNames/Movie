@@ -1,135 +1,182 @@
 * {
-    margin: 0;
-    padding: 0;
-    outline: none;
-    border: none;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-image: url(/assets/images/Background.avif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    backdrop-filter: blur(5px);
-  }
-  
-  #root {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  .container {
-    color: black;
-    background-color: white;
-    width: 95%;
-    height: 95%;
-    margin: 0px auto;
-    border-radius: 5px;
-    font-size: 14px;
-    font-family: "Open Sans", sans-serif;
-    border: 1px solid rgba(255, 255, 255, 0.233);
-  }
-  
-  .nav-bar{
-    background-color: black;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    background-size: 90px;
-    height: 50px;
-  }
-  
-  .search-bar {
-    width: 15%;
-    margin: 0 auto;
-    padding-top: 20px;
-    display: flex;
-    position: relative;
-    border-bottom: 1px solid white;
-  }
-  
-  .search-icon {
-    margin-right: 5px;
-    position: absolute;
-    left: 0;
-    cursor: pointer;
-  }
-  
-  .search-icon:hover {
-    color: #cacaca;
-  }
-  
-  #search-input {
-    border: 0;
-    outline: 0;
-    padding: 3px 3px 3px 20px;
-    background: transparent;
-    height: 20px;
-    color: white;
-  }
-  
-  #search-input::placeholder {
-    color: rgb(206, 206, 206);
-  }
-  
-  .info-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-    padding: 80px 50px;
-  }
-  
-  .city-name {
-    font-size: 20px;
-    margin-top: 3px;
-    margin-bottom: 5px;
-  }
-  
-  .weather-state {
-    font-size: 13px;
-  }
-  
-  .weather-icon {
-    width: 70px;
-    height: 70px;
-  }
-  
-  .temperature {
-    font-size: 80px;
-    font-weight: lighter;
-    line-height: 1;
-    position: relative;
-  }
-  
-  .temperature::after {
-    position: absolute;
-    font-size: 30px;
-  }
-  
-  .additional-section {
-    border-top: 1px solid white;
-    display: flex;
-    flex-direction: column;
-    padding: 10px 20px;
-    font-size: 13px;
-  }
-  
-  .additional-section .row {
-    margin-bottom: 10px;
-    display: flex;
-  }
-  
-  .additional-section .item {
-    display: flex;
-    flex-direction: column;
-    flex: 2; /*flex-shrink ( co lại ) flex-grow(dãn ra) và flex-basis ( xác định độ dài ban đầu )*/
-  }
-  
-  .additional-section .item .label {
-    font-weight: bold;
-  }
-  
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/assets/images/Background.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  backdrop-filter: blur(5px);
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  color: black;
+  background-color: black;
+  width: 95%;
+  height: 95%;
+  margin: 0px auto;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.233);
+}
+
+.nav-bar {
+  display: flex;
+  background-color: black;
+  color: white;
+  align-items: center;
+  margin-left: 10px;
+  justify-content: space-evenly;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 50px;
+}
+
+div .more {
+  text-decoration: none;
+  color: white;
+  font-size:  15px;
+  padding: 15px;
+  display: inline-block;
+}
+
+ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  display: inline-block;
+}
+ul li:hover {
+  background: #555;
+}
+ul li:hover ul {
+  display: block;
+}
+ul li ul {
+  position: absolute;
+  width: 100px;
+  display: none;
+}
+ul li ul li {
+  background: black;
+  display: block;
+}
+ul li ul li a {
+  color: white;
+  text-decoration: none;
+  display: block !important;
+}
+ul li ul li:hover {
+  background: rgb(192, 216, 242);
+}
+
+.body {
+  background-color: white;
+}
+
+.search-bar {
+  width: 15%;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid white;
+}
+
+.search-icon {
+  margin-right: 5px;
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+}
+
+.search-icon:hover {
+  color: #cacaca;
+}
+
+#search-input {
+  border: 0;
+  outline: 0;
+  padding: 3px 3px 3px 20px;
+  background: transparent;
+  height: 20px;
+  color: black;
+}
+
+#search-input::placeholder {
+  color: black;
+}
+
+.info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  padding: 80px 50px;
+}
+
+.city-name {
+  font-size: 20px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+.weather-state {
+  font-size: 13px;
+}
+
+.weather-icon {
+  width: 70px;
+  height: 70px;
+}
+
+.temperature {
+  font-size: 80px;
+  font-weight: lighter;
+  line-height: 1;
+  position: relative;
+}
+
+.temperature::after {
+  position: absolute;
+  font-size: 30px;
+}
+
+.additional-section {
+  border-top: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  font-size: 13px;
+}
+
+.additional-section .row {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.additional-section .item {
+  display: flex;
+  flex-direction: column;
+  flex: 2; /*flex-shrink ( co lại ) flex-grow(dãn ra) và flex-basis ( xác định độ dài ban đầu )*/
+}
+
+.additional-section .item .label {
+  font-weight: bold;
+}
