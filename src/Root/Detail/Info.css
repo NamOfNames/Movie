@@ -68,16 +68,31 @@ ul li ul li:hover {
   padding: 5%;
 }
 
-.main-body .header{
+.main-body .header {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
 
-.main-info .mini-info{
+.main-info .mini-info {
   display: flex;
 }
 
-.main-info .mini-info p{
+.main-info .mini-info p {
   padding: 5px;
+}
+
+#genre {
+  display: flex;
+  padding: 10px;
+}
+
+#genre p {
+  padding: 10px;
+  margin: 0px 10px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: red;
+  background-color: black;
+  color: white;
 }

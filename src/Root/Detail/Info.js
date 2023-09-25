@@ -30,7 +30,6 @@ function output() {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       movieTitle.innerHTML = data.title || DEFAULT_VALUE;
       movieYear.innerHTML = data.year || DEFAULT_VALUE;
       movieTime.innerHTML = data.runningTimeInMinutes || DEFAULT_VALUE;
@@ -44,7 +43,6 @@ function output() {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       moviePlot.innerHTML = data.plots[0].text || DEFAULT_VALUE;
     });
   fetch(
@@ -55,7 +53,22 @@ function output() {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       movieRating.innerHTML = data.rating || DEFAULT_VALUE;
+    });
+  fetch(
+    `https://imdb8.p.rapidapi.com/title/get-genres?tconst=${JSON.parse(
+      id_4
+    )}&limit=25&region=US`,
+    options
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      genre_num = data.length;
+      for (let i = 0; i < genre_num; i++) {
+        const genre = document.createElement("p");
+        genre.id = i;
+        genre.innerText = data[i];
+        document.getElementById("genre").append(genre);
+      }
     });
 }
