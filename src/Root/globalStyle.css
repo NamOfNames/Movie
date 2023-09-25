@@ -39,17 +39,21 @@ body {
   color: white;
   align-items: center;
   margin-left: 10px;
-  justify-content: space-evenly;
+  justify-content: space-between;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   height: 50px;
 }
 
-div .more {
-  text-decoration: none;
+.nav-bar a {
+  padding: 10px;
   color: white;
-  font-size:  15px;
-  padding: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+div .more {
+  font-size: 15px;
   display: inline-block;
 }
 
@@ -86,23 +90,11 @@ ul li ul li:hover {
 }
 
 .body {
-  background-color: white;
+  background-color: black;
 }
 
 .search-bar {
-  width: 15%;
-  margin: 0 auto;
-  padding-top: 20px;
-  display: flex;
-  position: relative;
-  border-bottom: 1px solid white;
-}
-
-.search-icon {
-  margin-right: 5px;
-  position: absolute;
-  left: 0;
-  cursor: pointer;
+  background-color: white;
 }
 
 .search-icon:hover {
@@ -112,14 +104,17 @@ ul li ul li:hover {
 #search-input {
   border: 0;
   outline: 0;
-  padding: 3px 3px 3px 20px;
-  background: transparent;
-  height: 20px;
-  color: black;
+  padding: 5px 40px 5px 40px;
+  background: black;
+  color: white;
 }
 
 #search-input::placeholder {
-  color: black;
+  color: white;
+}
+
+.extra-bar{
+  padding: 20px;
 }
 
 .info-wrapper {
@@ -127,56 +122,36 @@ ul li ul li:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh;
-  padding: 80px 50px;
+  height: 82vh;
 }
 
-.city-name {
-  font-size: 20px;
-  margin-top: 3px;
-  margin-bottom: 5px;
-}
-
-.weather-state {
-  font-size: 13px;
-}
-
-.weather-icon {
-  width: 70px;
-  height: 70px;
-}
-
-.temperature {
-  font-size: 80px;
-  font-weight: lighter;
-  line-height: 1;
-  position: relative;
-}
-
-.temperature::after {
-  position: absolute;
-  font-size: 30px;
-}
-
-.additional-section {
-  border-top: 1px solid white;
+#movies-list {
   display: flex;
-  flex-direction: column;
-  padding: 10px 20px;
-  font-size: 13px;
+  flex-wrap: wrap;
+  overflow: auto;
 }
 
-.additional-section .row {
-  margin-bottom: 10px;
+#movies-list .poster {
+  padding: 32px;
+}
+
+.poster-images {
+  width: 200px;
+  height: 300px;
+  border: 1px solid black;
+}
+
+.poster-titles {
+  width: 200px;
   display: flex;
-}
-
-.additional-section .item {
-  display: flex;
-  flex-direction: column;
-  flex: 2; /*flex-shrink ( co lại ) flex-grow(dãn ra) và flex-basis ( xác định độ dài ban đầu )*/
-}
-
-.additional-section .item .label {
+  flex-wrap: wrap;
   font-weight: bold;
+  color: white;
+  background-color: black;
+}
+
+footer {
+  padding: 10px;
+  height: 8vh;
+  color: white;
 }

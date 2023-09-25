@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie database</title>
+    <link rel="shortcut icon" href="./img/Icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./Info.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body onload="output()">
+    <nav>
+      <div class="main-bar">
+        <a href="./Sub index.html">Movies</a>
+        <a>People</a>
+        <ul>
+          <li>
+            <a href="#" class="more">More</a>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="extra-bar">
+        <a href="../Auth/Login/Login.html">Login</a>
+      </div>
+    </nav>
+    <div class="main-body">
+      <div class="header">
+        <div class="main-info">
+          <h1 class="movie-title"></h1>
+          <div class="mini-info">
+            <p class="movie-year"></p>
+            <p>•</p>
+            <p><span class="movie-running-time"></span>mins</p>
+          </div>
+        </div>
+        <div class="sub-info">
+          <div class="Rating">
+            <p>IMDb Rating</p>
+            <p>⭐<span class="movie-rating"></span>/10</p>
+          </div>
+        </div>
+      </div>
+      <div class="body">
+        <img width="300px" class="movie-image" src="" alt="" />
+        <div class="genre"></div>
+        <p class="movie-plot"></p>
+      </div>
+    </div>
+    <div class="footer"></div>
+  </body>
+  <script src="./Info.js"></script>
+</html>

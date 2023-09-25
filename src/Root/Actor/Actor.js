@@ -1,15 +1,22 @@
 const searchInput = document.getElementById("search-input");
-const movieImage = document.querySelector(".movie-image");
-const movieList = document.getElementById("movies-list");
+const acotImage = document.querySelector(".movie-image");
+const actorList = document.getElementById("movies-list");
 const poster = null;
 
+const url = "https://imdb8.p.rapidapi.com/title/find?q=spiderman";
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "268ee95b88mshadb93b17b6d27e3p1f99f4jsn48d3b51d0a2a",
+    "X-RapidAPI-Key": "83fcb7fadfmshe81b9904851bb6dp18240bjsne87fa9e95105",
     "X-RapidAPI-Host": "imdb8.p.rapidapi.com",
   },
 };
+
+function clearAll() {
+  while (items.firstChild) {
+    items.removeChild(items.firstChild);
+  }
+}
 
 searchInput.addEventListener("change", (event) => {
   fetch(
@@ -28,8 +35,8 @@ searchInput.addEventListener("change", (event) => {
       }
       for (let i = 0; i < types.length; i++) {
         const images = document.createElement("img");
-        const titles = document.createElement("button");
-        const list = document.createElement("a");
+        const name = document.createElement("button");
+        const list = document.createElement("div");
         list.id = i;
         titles.id = types[i].id;
         titles.innerText = types[i]["title"];
@@ -41,16 +48,7 @@ searchInput.addEventListener("change", (event) => {
         document.getElementById([i]).append(images);
         document.getElementById([i]).append(titles);
         movieID = document.getElementById(types[i].id);
-        let link = document.getElementById([i]);
-        link.addEventListener("click", () => {
-          let id = JSON.stringify(types[i].id);
-          localStorage.setItem("id_firm", id);
-          link.href = "../Root/Detail/Info.html";
-        });
+        movieID.options
       }
     });
 });
-
-function moveInfo() {
-  location.href = "./Info.html";
-}
