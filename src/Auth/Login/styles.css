@@ -53,6 +53,10 @@ input:focus-visible {
   width: 350px;
 }
 
+#error_noti{
+  display: none;
+}
+
 #error_email_noti {
   display: none;
 }

@@ -3,6 +3,7 @@ let inputPassword = document.getElementById("password_input");
 
 let errorEmailNoti = document.getElementById("error_email_noti");
 let errorPasswordNoti = document.getElementById("error_password_noti");
+let errorNoti = document.getElementById("error_noti");
 
 function validation() {
   let valueEmail = inputEmail.value;
@@ -28,4 +29,19 @@ function validation() {
     let linkHome = document.getElementById("linkHome");
     linkHome.href = "../index.html";
   }
+  if ((valueEmail != "") & (valuePassword != "")) {
+    let retEmail = JSON.parse(localStorage.getItem("Email"));
+    let retPassword = JSON.parse(localStorage.getItem("Password"));
+    storage_num = retEmail.length;
+    for (let i = 0; i < storage_num; i++) {
+      if ((valueEmail == retEmail[i]) & (valuePassword == retPassword[i])) {
+        Login();
+      }
+    }
+  }
+}
+
+function Login() {
+  let linkHome = document.getElementById("linkHome");
+  linkHome.href = "/src/Root/index.html";
 }

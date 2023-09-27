@@ -8,7 +8,8 @@ let errorEmailNoti = document.getElementById("error_email_noti");
 let errorPasswordNoti = document.getElementById("error_password_noti");
 let ConfirmPasswordNoti = document.getElementById("confirm_password_noti");
 
-Info_storage = [];
+Email_storage = [];
+Password_storage = [];
 
 function validation() {
   let valueName = inputName.value;
@@ -66,9 +67,15 @@ function validation() {
     (valueEmail != "") &
     (valuePassword == valueConfirmPassword)
   ) {
-    console.log("YES SIR");
-    Info_storage.push(valueEmail, valuePassword);
-    console.log(Info_storage);
-    localStorage.setItem("Email", Info_storage);
+    Email_storage.push(valueEmail);
+    Password_storage.push(valuePassword);
+    Email = JSON.stringify(Email_storage);
+    Password = JSON.stringify(Password_storage);
+    localStorage.setItem("Email", Email);
+    localStorage.setItem("Password", Password);
   }
+}
+
+function clear_storage() {
+  localStorage.clear();
 }
