@@ -3,7 +3,6 @@ id_2 = id.replace("title", "");
 id_3 = id_2.replace("//", "");
 id_4 = id_3.replace("/", "");
 
-const DEFAULT_VALUE = "--";
 const movieImage = document.querySelector(".movie-image");
 const movieYear = document.querySelector(".movie-year");
 const movieTitle = document.querySelector(".movie-title");

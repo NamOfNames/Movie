@@ -42,6 +42,7 @@ function validation() {
 }
 
 function Login() {
+  localStorage.setItem("Login", true);
   let linkHome = document.getElementById("linkHome");
   linkHome.href = "/src/Root/index.html";
 }

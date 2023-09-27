@@ -73,6 +73,8 @@ function validation() {
     Password = JSON.stringify(Password_storage);
     localStorage.setItem("Email", Email);
     localStorage.setItem("Password", Password);
+    let linkLogin = document.getElementById("linkLogin");
+    linkLogin.href = "../Login/Login.html";
   }
 }
 

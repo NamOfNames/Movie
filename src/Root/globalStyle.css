@@ -36,7 +36,6 @@ body {
 .nav-bar {
   display: flex;
   background-color: black;
-  color: white;
   align-items: center;
   margin-left: 10px;
   justify-content: space-between;
@@ -154,4 +153,44 @@ footer {
   padding: 10px;
   height: 8vh;
   color: white;
+}
+
+div .account {
+  font-size: 15px;
+  display: inline-block;
+  background-color: white;
+  border-radius: 100%;
+  display: none;
+}
+
+ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  display: inline-block;
+}
+ul li:hover {
+  background: #555;
+}
+ul li:hover ul {
+  display: block;
+}
+ul li ul {
+  position: absolute;
+  width: 100px;
+  display: none;
+}
+ul li ul li {
+  background: black;
+  display: block;
+}
+ul li ul li a {
+  color: white;
+  text-decoration: none;
+  display: block !important;
+}
+ul li ul li:hover {
+  background: rgb(192, 216, 242);
 }

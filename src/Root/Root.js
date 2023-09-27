@@ -54,3 +54,14 @@ searchInput.addEventListener("change", (event) => {
 function moveInfo() {
   location.href = "./Info.html";
 }
+
+function Account_login(){
+  key = localStorage.getItem("Login")
+  if (key){
+    Account()
+  }
+}
+
+function Account(){
+  
+}
