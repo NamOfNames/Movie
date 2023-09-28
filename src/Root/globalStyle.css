@@ -181,11 +181,3 @@ footer {
 .account:hover .dropbtn {
   background-color: #555;
 }
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #555;
-}

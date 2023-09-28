@@ -52,7 +52,6 @@ ul li:hover ul {
   display: block;
 }
 ul li ul {
-  right: 0;
   position: absolute;
   display: none;
 }
@@ -69,8 +68,55 @@ ul li ul li:hover {
   background: rgb(192, 216, 242);
 }
 
+.extra-bar {
+  margin: 15px;
+}
+
+.dropbtn {
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.account {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: black;
+  min-width: 100px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(192, 216, 242);
+}
+
+.account:hover .dropdown-content {
+  display: block;
+}
+
+.account:hover .dropbtn {
+  background-color: #555;
+}
+
 .main-body {
-  padding: 5%;
+  padding: 3%;
   color: white;
 }
 

@@ -32,20 +32,15 @@
       <div class="extra-bar">
         <a id="login" href="/src/Auth/Login/Login.html">Login</a>
         <div class="account" id="account">
-          <ul>
-            <li>
-              <img
-                class="Profile"
-                width="40px"
-                src="/assets/images/Profil-Icon.png"
-                alt=""
-              />
-              <ul>
-                <li><a href="#">Bookmark</a></li>
-                <li><a onclick="Account_logout()" href="#">Logout</a></li>
-              </ul>
-            </li>
-          </ul>
+          <img
+            width="50px"
+            class="dropbtn"
+            src="/assets/images/Profil-Icon.png"
+          />
+          <div class="dropdown-content">
+            <a href="#">Bookmark</a>
+            <a onclick="Account_logout()" href="#">Sign out</a>
+          </div>
         </div>
       </div>
     </nav>
@@ -68,7 +63,9 @@
       </div>
       <div class="body">
         <img width="300px" class="movie-image" src="" alt="" />
+        <br>
         <div id="genre"></div>
+        <br>
         <p class="movie-plot"></p>
       </div>
     </div>
