@@ -41,14 +41,19 @@
               />
             </div>
             <div class="extra-bar">
-              <a href="/src/Auth/Login/Login.html">Login</a>
-              <div class="account" id="Login">
+              <a id="login" href="/src/Auth/Login/Login.html">Login</a>
+              <div class="account" id="account">
                 <ul>
                   <li>
-                    <img class="Profile" width="20px" src="/assets/images/Profil-Icon.png" alt="" />
+                    <img
+                      class="Profile"
+                      width="40px"
+                      src="/assets/images/Profil-Icon.png"
+                      alt=""
+                    />
                     <ul>
                       <li><a href="#">Bookmark</a></li>
-                      <li><a href="#">Logout</a></li>
+                      <li><a onclick="Account_logout()" href="#">Logout</a></li>
                     </ul>
                   </li>
                 </ul>

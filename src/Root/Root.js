@@ -1,6 +1,8 @@
 const searchInput = document.getElementById("search-input");
 const movieImage = document.querySelector(".movie-image");
 const movieList = document.getElementById("movies-list");
+const account = document.getElementById("account");
+const login = document.getElementById("login");
 const poster = null;
 
 const options = {
@@ -55,13 +57,19 @@ function moveInfo() {
   location.href = "./Info.html";
 }
 
-function Account_login(){
-  key = localStorage.getItem("Login")
-  if (key){
-    Account()
+function Account_login() {
+  key = JSON.parse(localStorage.getItem("Login"));
+  if (key) {
+    login.style = "display: none";
+    account.style = "display: block";
+  } else {
+    login.style = "display: block";
+    account.style = "display: none";
   }
 }
 
-function Account(){
-  
+function Account_logout() {
+  localStorage.setItem("Login", false);
+  location.href = "index.html";
+  Account_login();
 }
