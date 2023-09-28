@@ -155,40 +155,53 @@ footer {
   color: white;
 }
 
-div .account {
-  font-size: 15px;
-  display: inline-block;
-  border-radius: 100%;
-  display: none;
+.dropbtn {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
 }
 
-ul {
-  display: inline;
-  margin: 0;
-  padding: 0;
-}
-ul li {
+.account {
+  position: relative;
   display: inline-block;
 }
-ul li:hover {
-  background: #555;
+
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
-ul li:hover ul {
-  display: block;
-}
-ul li ul {
-  width: 100px;
+
+.dropdown-content {
   display: none;
+  position: absolute;
+  right: 0;
+  background-color: black;
+  min-width: 100px;
+  z-index: 1;
 }
-ul li ul li {
-  background: black;
-  display: block;
-}
-ul li ul li a {
+
+.dropdown-content a {
   color: white;
   text-decoration: none;
-  display: block !important;
+  display: block;
 }
-ul li ul li:hover {
-  background: rgb(192, 216, 242);
+
+.dropdown-content a:hover {
+  background-color: rgb(192, 216, 242);
+}
+
+.account:hover .dropdown-content {
+  display: block;
+}
+
+.account:hover .dropbtn {
+  background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #555;
 }
