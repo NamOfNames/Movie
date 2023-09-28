@@ -15,63 +15,52 @@
     />
   </head>
   <body onload="Account_login()">
-    <div id="root">
-      <div class="container">
-        <header>
-          <div class="nav-bar">
-            <div class="main-bar">
-              <a href="./index.html">Movies</a>
-              <a>People</a>
+    <div id="root" class="container">
+      <header class="nav-bar">
+        <div class="main-bar">
+          <a href="./index.html">Movies</a>
+          <a>People</a>
+          <ul>
+            <li>
+              <a href="#" class="more">More</a>
               <ul>
-                <li>
-                  <a href="#" class="more">More</a>
-                  <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                  </ul>
-                </li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
               </ul>
-              <div class="dropdown" style="float: left">
-                <button class="dropbtn">More</button>
-                <div class="dropdown-content" style="left: 0">
-                  <a href="#">About Us</a>
-                  <a href="#">Contact Us</a>
-                </div>
-              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="search-bar">
+          <input
+            type="text"
+            name="search-movie"
+            id="search-input"
+            placeholder="Tìm kiếm bộ phim... 🔎"
+          />
+        </div>
+        <div class="extra-bar">
+          <a id="login" href="/src/Auth/Login/Login.html">Login</a>
+          <div class="account" id="account">
+            <img
+              width="50px"
+              class="dropbtn"
+              src="/assets/images/Profil-Icon.png"
+            />
+            <div class="dropdown-content">
+              <a href="#">Bookmark</a>
+              <a onclick="Account_logout()" href="#">Sign out</a>
             </div>
-            <div class="search-bar">
-              <input
-                type="text"
-                name="search-movie"
-                id="search-input"
-                placeholder="Tìm kiếm bộ phim... 🔎"
-              />
-            </div>
-            <div class="extra-bar">
-              <a id="login" href="/src/Auth/Login/Login.html">Login</a>
-              <div class="account" id="account">
-                <img
-                  width="50px"
-                  class="dropbtn"
-                  src="/assets/images/Profil-Icon.png"
-                />
-                <div class="dropdown-content">
-                  <a href="#">Bookmark</a>
-                  <a onclick="Account_logout()" href="#">Sign out</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
-        <div class="body">
-          <div class="info-wrapper">
-            <div id="movies-list"></div>
           </div>
         </div>
-        <footer>
-          <a role="button" href="../Root/Detail/Info.html">Info</a>
-        </footer>
-      </div>
+      </header>
+      <content>
+        <div class="info-wrapper">
+          <div id="movies-list"></div>
+        </div>
+      </content>
+      <footer>
+        <a role="button" href="../Root/Detail/Info.html">Info</a>
+      </footer>
     </div>
   </body>
   <script src="./Root.js"></script>
