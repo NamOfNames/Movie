@@ -10,6 +10,8 @@ const movieTime = document.querySelector(".movie-running-time");
 const imageBackground = document.querySelector(".background-image");
 const movieRating = document.querySelector(".movie-rating");
 const moviePlot = document.querySelector(".movie-plot");
+const account = document.getElementById("account");
+const login = document.getElementById("login");
 const poster = null;
 
 const options = {
@@ -70,4 +72,25 @@ function output() {
         document.getElementById("genre").append(genre);
       }
     });
+}
+
+function moveInfo() {
+  location.href = "./Info.html";
+}
+
+function Account_login() {
+  key = JSON.parse(localStorage.getItem("Login"));
+  if (key) {
+    login.style = "display: none";
+    account.style = "display: block";
+  } else {
+    login.style = "display: block";
+    account.style = "display: none";
+  }
+}
+
+function Account_logout() {
+  localStorage.setItem("Login", false);
+  location.href = "Info.html";
+  Account_login();
 }

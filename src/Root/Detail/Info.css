@@ -7,6 +7,10 @@
 }
 
 body {
+  background-image: url(/assets/images/Background.avif);
+  background-size: cover;
+  background-color: grey;
+  background-blend-mode: multiply;
   height: 100vh;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
@@ -66,6 +70,7 @@ ul li ul li:hover {
 
 .main-body {
   padding: 5%;
+  color: white;
 }
 
 .main-body .header {
