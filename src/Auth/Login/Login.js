@@ -36,8 +36,14 @@ function validation() {
     for (let i = 0; i < storage_num; i++) {
       if ((valueEmail == retEmail[i]) & (valuePassword == retPassword[i])) {
         Login();
+      } else {
+        errorEmailNoti.innerHTML = "Email hoặc mật khẩu chưa chính xác";
+        errorEmailNoti.style = "color: yellow; display: block";
       }
     }
+  } else {
+    errorEmailNoti.innerHTML = "Chưa Nhập Vào Email";
+    errorEmailNoti.style = "color: yellow; display: block";
   }
 }
 
@@ -45,4 +51,8 @@ function Login() {
   localStorage.setItem("Login", true);
   let linkHome = document.getElementById("linkHome");
   linkHome.href = "/src/Root/index.html";
+}
+
+function clear_storage() {
+  localStorage.clear();
 }

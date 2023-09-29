@@ -8,8 +8,8 @@ let errorEmailNoti = document.getElementById("error_email_noti");
 let errorPasswordNoti = document.getElementById("error_password_noti");
 let ConfirmPasswordNoti = document.getElementById("confirm_password_noti");
 
-Email_storage = [];
-Password_storage = [];
+Email = [];
+Password = [];
 
 function validation() {
   let valueName = inputName.value;
@@ -67,17 +67,31 @@ function validation() {
     (valueEmail != "") &
     (valuePassword == valueConfirmPassword)
   ) {
-    Email_storage.push(valueEmail);
-    Password_storage.push(valuePassword);
-    Email = JSON.stringify(Email_storage);
-    Password = JSON.stringify(Password_storage);
-    localStorage.setItem("Email", Email);
-    localStorage.setItem("Password", Password);
-    let linkLogin = document.getElementById("linkLogin");
-    linkLogin.href = "../Login/Login.html";
+    SaveEmail(valueEmail);
+    SavePassword(valuePassword);
+    Login_page();
   }
 }
 
 function clear_storage() {
   localStorage.clear();
+}
+
+function Login_page() {
+  let linkLogin = document.getElementById("linkLogin");
+  linkLogin.href = "../Login/Login.html";
+}
+
+function SaveEmail(data) {
+  var a = [];
+  a = JSON.parse(localStorage.getItem("Email")) || [];
+  a.push(data);
+  localStorage.setItem("Email", JSON.stringify(a));
+}
+
+function SavePassword(data) {
+  var a = [];
+  a = JSON.parse(localStorage.getItem("Password")) || [];
+  a.push(data);
+  localStorage.setItem("Password", JSON.stringify(a));
 }

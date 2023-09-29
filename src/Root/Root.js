@@ -8,7 +8,7 @@ const poster = null;
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "d9210ed651msh7a94c663782122cp1dee08jsn169ad437e564",
+    "X-RapidAPI-Key": "d1393cad79msh5498c9e4663e756p1e23a7jsnb5cb58b163fd",
     "X-RapidAPI-Host": "imdb8.p.rapidapi.com",
   },
 };

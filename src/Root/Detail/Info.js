@@ -12,13 +12,14 @@ const movieRating = document.querySelector(".movie-rating");
 const moviePlot = document.querySelector(".movie-plot");
 const account = document.getElementById("account");
 const login = document.getElementById("login");
-const bookmarkMovie = document.querySelector(".bookmark")
+const bookmarkMovie = document.querySelector(".bookmark");
 const poster = null;
+Bookmark_storage = [];
 
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "d9210ed651msh7a94c663782122cp1dee08jsn169ad437e564",
+    "X-RapidAPI-Key": "d1393cad79msh5498c9e4663e756p1e23a7jsnb5cb58b163fd",
     "X-RapidAPI-Host": "imdb8.p.rapidapi.com",
   },
 };
@@ -96,7 +97,30 @@ function Account_logout() {
   Account_login();
 }
 
-function Bookmark(){
-  bookmarkMovie.style = "fill: yellow"
-  // localStorage.setItem("Bookmark")
+bookmarkMovie.addEventListener("click", function onClikc() {
+  key = JSON.parse(localStorage.getItem("Login"));
+  if (key) {
+    console.log(bookmarkMovie.style.cssText);
+    if (
+      bookmarkMovie.style.cssText == "fill: black;" ||
+      bookmarkMovie.style.cssText == ""
+    ) {
+      bookmarkMovie.style.fill = "yellow";
+    } else {
+      bookmarkMovie.style.fill = "black";
+    }
+  } else {
+    alert("Please log in to use the bookmark function");
+  }
+});
+
+function clear_storage() {
+  localStorage.clear();
+}
+
+function SaveBookmark(data) {
+  var a = [];
+  a = JSON.parse(localStorage.getItem("Bookmark")) || [];
+  a.push(data);
+  localStorage.setItem("Bookmark", JSON.stringify(a));
 }

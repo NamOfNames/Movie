@@ -28,6 +28,7 @@
             </ul>
           </li>
         </ul>
+        <button onclick="clear_storage()">clear</button>
       </div>
       <div class="extra-bar">
         <a id="login" href="/src/Auth/Login/Login.html">Login</a>
@@ -50,7 +51,6 @@
           <div class="flex">
             <h1 class="movie-title"></h1>
             <svg
-              onclick="Bookmark()"
               class="ipc-watchlist-ribbon__bg bookmark"
               width="24px"
               height="34px"
@@ -60,7 +60,7 @@
             >
               <polygon
                 class="ipc-watchlist-ribbon__bg-ribbon"
-                fill="#fefeff"
+                fill="black"
                 points="24 0 0 0 0 32 12.2436611 26.2926049 24 31.7728343"
               ></polygon>
               <polygon
