@@ -12,6 +12,7 @@ const movieRating = document.querySelector(".movie-rating");
 const moviePlot = document.querySelector(".movie-plot");
 const account = document.getElementById("account");
 const login = document.getElementById("login");
+const bookmarkMovie = document.querySelector(".bookmark")
 const poster = null;
 
 const options = {
@@ -93,4 +94,9 @@ function Account_logout() {
   localStorage.setItem("Login", false);
   location.href = "Info.html";
   Account_login();
+}
+
+function Bookmark(){
+  bookmarkMovie.style = "fill: yellow"
+  // localStorage.setItem("Bookmark")
 }

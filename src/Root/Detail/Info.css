@@ -126,6 +126,22 @@ ul li ul li:hover {
   justify-content: space-between;
 }
 
+.main-body .header .main-info .flex {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-body .header .main-info .flex svg {
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.main-body .header .main-info .flex svg:hover {
+  fill: white;
+}
+
 .main-info .mini-info {
   display: flex;
 }

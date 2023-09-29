@@ -47,7 +47,32 @@
     <div class="main-body">
       <div class="header">
         <div class="main-info">
-          <h1 class="movie-title"></h1>
+          <div class="flex">
+            <h1 class="movie-title"></h1>
+            <svg
+              onclick="Bookmark()"
+              class="ipc-watchlist-ribbon__bg bookmark"
+              width="24px"
+              height="34px"
+              viewBox="0 0 24 34"
+              xmlns="http://www.w3.org/2000/svg"
+              role="presentation"
+            >
+              <polygon
+                class="ipc-watchlist-ribbon__bg-ribbon"
+                fill="#fefeff"
+                points="24 0 0 0 0 32 12.2436611 26.2926049 24 31.7728343"
+              ></polygon>
+              <polygon
+                class="ipc-watchlist-ribbon__bg-hover"
+                points="24 0 0 0 0 32 12.2436611 26.2926049 24 31.7728343"
+              ></polygon>
+              <polygon
+                class="ipc-watchlist-ribbon__bg-shadow"
+                points="24 31.7728343 24 33.7728343 12.2436611 28.2926049 0 34 0 32 12.2436611 26.2926049"
+              ></polygon>
+            </svg>
+          </div>
           <div class="mini-info">
             <p class="movie-year"></p>
             <p>•</p>
@@ -63,9 +88,9 @@
       </div>
       <div class="body">
         <img width="300px" class="movie-image" src="" alt="" />
-        <br>
+        <br />
         <div id="genre"></div>
-        <br>
+        <br />
         <p class="movie-plot"></p>
       </div>
     </div>
