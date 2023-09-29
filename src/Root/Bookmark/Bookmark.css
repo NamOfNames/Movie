@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/assets/images/Background.avif);
+  background-size: cover;
+  background-color: grey;
+  background-blend-mode: multiply;
+  height: 100vh;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+nav {
+  display: flex;
+  background-color: black;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+nav a {
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+div .more {
+  font-size: 15px;
+  display: inline-block;
+}
+
+ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  display: inline-block;
+}
+ul li:hover {
+  background: #555;
+}
+ul li:hover ul {
+  display: block;
+}
+ul li ul {
+  position: absolute;
+  display: none;
+}
+ul li ul li {
+  background: black;
+  display: block;
+}
+ul li ul li a {
+  color: white;
+  text-decoration: none;
+  display: block !important;
+}
+ul li ul li:hover {
+  background: rgb(192, 216, 242);
+}
+
+.extra-bar {
+  margin: 15px;
+}
+
+.dropbtn {
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.account {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: black;
+  min-width: 100px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(192, 216, 242);
+}
+
+.account:hover .dropdown-content {
+  display: block;
+}
+
+.account:hover .dropbtn {
+  background-color: #555;
+}
+
+.main-body {
+  padding: 3%;
+  color: white;
+}
+
+.main-body .header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.main-body .header .main-info .flex {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-body .header .main-info .flex svg {
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.main-body .header .main-info .flex svg:hover {
+  fill: white;
+}
+
+.main-info .mini-info {
+  display: flex;
+}
+
+.main-info .mini-info p {
+  padding: 5px;
+}
+
+#genre {
+  display: flex;
+  padding: 10px;
+}
+
+#genre p {
+  padding: 10px;
+  margin: 0px 10px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: yellow;
+  background-color: black;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

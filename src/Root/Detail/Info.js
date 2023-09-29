@@ -1,7 +1,7 @@
 let id = localStorage.getItem("id_firm");
 id_2 = id.replace("title", "");
-id_3 = id_2.replace("//", "");
-id_4 = id_3.replace("/", "");
+id = id_2.replace("//", "");
+id_2 = id.replace("/", "");
 
 const movieImage = document.querySelector(".movie-image");
 const movieYear = document.querySelector(".movie-year");
@@ -27,7 +27,7 @@ const options = {
 function output() {
   fetch(
     `https://imdb8.p.rapidapi.com/title/get-details?tconst=${JSON.parse(
-      id_4
+      id_2
     )}&limit=25&region=US`,
     options
   )
@@ -40,7 +40,7 @@ function output() {
     });
   fetch(
     `https://imdb8.p.rapidapi.com/title/get-plots?tconst=${JSON.parse(
-      id_4
+      id_2
     )}&limit=25&region=US`,
     options
   )
@@ -50,7 +50,7 @@ function output() {
     });
   fetch(
     `https://imdb8.p.rapidapi.com/title/get-ratings?tconst=${JSON.parse(
-      id_4
+      id_2
     )}&limit=25&region=US`,
     options
   )
@@ -60,7 +60,7 @@ function output() {
     });
   fetch(
     `https://imdb8.p.rapidapi.com/title/get-genres?tconst=${JSON.parse(
-      id_4
+      id_2
     )}&limit=25&region=US`,
     options
   )
@@ -100,7 +100,6 @@ function Account_logout() {
 bookmarkMovie.addEventListener("click", function onClikc() {
   key = JSON.parse(localStorage.getItem("Login"));
   if (key) {
-    console.log(bookmarkMovie.style.cssText);
     if (
       bookmarkMovie.style.cssText == "fill: black;" ||
       bookmarkMovie.style.cssText == ""
@@ -130,11 +129,9 @@ function SaveBookmark(data) {
 function DeleteBookmark(data) {
   var a = [];
   a = JSON.parse(localStorage.getItem("Bookmark")) || [];
-  console.log(a[0]);
-  console.log(data);
   for (let i = 0; i < a.length; i++) {
     if (data == a[i]) {
-      delete a[i];
+      a.pop(i);
     }
   }
   localStorage.setItem("Bookmark", JSON.stringify(a));

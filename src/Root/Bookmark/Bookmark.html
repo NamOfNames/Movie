@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie database</title>
+    <link rel="stylesheet" href="./Bookmark.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body onload="Account_login(); Output_Bookmark()">
+    <nav>
+      <div class="main-bar">
+        <a href="../index.html">Movies</a>
+        <a>People</a>
+        <ul>
+          <li>
+            <a href="#" class="more">More</a>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button onclick="clear_storage()">clear</button>
+      </div>
+      <div class="extra-bar">
+        <a id="login" href="/src/Auth/Login/Login.html">Login</a>
+        <div class="account" id="account">
+          <img
+            width="50px"
+            class="dropbtn"
+            src="/assets/images/Profil-Icon.png"
+          />
+          <div class="dropdown-content">
+            <a href="#">Bookmark</a>
+            <a onclick="Account_logout()" href="#">Sign out</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="main-body">
+
+    </div>
+    <div class="footer"></div>
+  </body>
+  <script src="./Bookmark.js"></script>
+</html>
