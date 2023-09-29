@@ -106,8 +106,10 @@ bookmarkMovie.addEventListener("click", function onClikc() {
       bookmarkMovie.style.cssText == ""
     ) {
       bookmarkMovie.style.fill = "yellow";
+      SaveBookmark(id);
     } else {
       bookmarkMovie.style.fill = "black";
+      DeleteBookmark(id);
     }
   } else {
     alert("Please log in to use the bookmark function");
@@ -115,12 +117,25 @@ bookmarkMovie.addEventListener("click", function onClikc() {
 });
 
 function clear_storage() {
-  localStorage.clear();
+  localStorage.removeItem("Bookmark");
 }
 
 function SaveBookmark(data) {
   var a = [];
   a = JSON.parse(localStorage.getItem("Bookmark")) || [];
   a.push(data);
+  localStorage.setItem("Bookmark", JSON.stringify(a));
+}
+
+function DeleteBookmark(data) {
+  var a = [];
+  a = JSON.parse(localStorage.getItem("Bookmark")) || [];
+  console.log(a[0]);
+  console.log(data);
+  for (let i = 0; i < a.length; i++) {
+    if (data == a[i]) {
+      delete a[i];
+    }
+  }
   localStorage.setItem("Bookmark", JSON.stringify(a));
 }
