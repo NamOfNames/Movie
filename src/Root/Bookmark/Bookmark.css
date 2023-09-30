@@ -136,13 +136,16 @@ ul li ul li:hover {
 }
 
 .poster-titles {
+  font-size: large;
   width: 200px;
   display: flex;
   flex-wrap: wrap;
   font-weight: bold;
-  color: black;
-  background-color: none;
-  text-decoration: none;
+  color: white;
+  background: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 ::-webkit-scrollbar {

@@ -14,7 +14,6 @@ const account = document.getElementById("account");
 const login = document.getElementById("login");
 const bookmarkMovie = document.querySelector(".bookmark");
 const poster = null;
-Bookmark_storage = [];
 
 const options = {
   method: "GET",
@@ -135,4 +134,13 @@ function DeleteBookmark(data) {
     }
   }
   localStorage.setItem("Bookmark", JSON.stringify(a));
+}
+
+function Bookmark() {
+  bookmark_movies = JSON.parse(localStorage.getItem("Bookmark"));
+  if (bookmark_movies.includes(id)) {
+    bookmarkMovie.style.fill = "yellow";
+  } else {
+    bookmarkMovie.style.fill = "black";
+  }
 }

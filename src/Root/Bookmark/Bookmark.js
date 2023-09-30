@@ -28,9 +28,7 @@ function Output_Bookmark(callback) {
         MovieBookmark.innerHTML = "";
         ImageData.push(data.image.url);
         TitleData.push(data.title);
-        console.log(ImageData);
         for (let i = 0; i < TitleData.length; i++) {
-          console.log(i);
           const images = document.createElement("img");
           const titles = document.createElement("button");
           const list = document.createElement("a");
