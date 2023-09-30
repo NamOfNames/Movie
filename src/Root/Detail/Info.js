@@ -1,7 +1,7 @@
 let id = localStorage.getItem("id_firm");
-id_2 = id.replace("title", "");
-id = id_2.replace("//", "");
-id_2 = id.replace("/", "");
+id = id.replace("title", "");
+id = id.replace("//", "");
+id = id.replace("/", "");
 
 const movieImage = document.querySelector(".movie-image");
 const movieYear = document.querySelector(".movie-year");
@@ -19,7 +19,7 @@ Bookmark_storage = [];
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "d1393cad79msh5498c9e4663e756p1e23a7jsnb5cb58b163fd",
+    "X-RapidAPI-Key": "d93534d06fmshde2150e51c0bfebp1e76a5jsn9d6cfe389f06",
     "X-RapidAPI-Host": "imdb8.p.rapidapi.com",
   },
 };
@@ -27,7 +27,7 @@ const options = {
 function output() {
   fetch(
     `https://imdb8.p.rapidapi.com/title/get-details?tconst=${JSON.parse(
-      id_2
+      id
     )}&limit=25&region=US`,
     options
   )
@@ -40,7 +40,7 @@ function output() {
     });
   fetch(
     `https://imdb8.p.rapidapi.com/title/get-plots?tconst=${JSON.parse(
-      id_2
+      id
     )}&limit=25&region=US`,
     options
   )
@@ -50,7 +50,7 @@ function output() {
     });
   fetch(
     `https://imdb8.p.rapidapi.com/title/get-ratings?tconst=${JSON.parse(
-      id_2
+      id
     )}&limit=25&region=US`,
     options
   )
@@ -60,7 +60,7 @@ function output() {
     });
   fetch(
     `https://imdb8.p.rapidapi.com/title/get-genres?tconst=${JSON.parse(
-      id_2
+      id
     )}&limit=25&region=US`,
     options
   )

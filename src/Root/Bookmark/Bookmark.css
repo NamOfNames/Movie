@@ -115,54 +115,34 @@ ul li ul li:hover {
   background-color: #555;
 }
 
-.main-body {
-  padding: 3%;
-  color: white;
-}
-
-.main-body .header {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.main-body .header .main-info .flex {
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.main-body .header .main-info .flex svg {
-  border-radius: 5px;
-  margin: 10px;
-}
-
-.main-body .header .main-info .flex svg:hover {
-  fill: white;
-}
-
-.main-info .mini-info {
+.info-wrapper {
   display: flex;
 }
 
-.main-info .mini-info p {
-  padding: 5px;
-}
-
-#genre {
+#bookmark-list {
   display: flex;
-  padding: 10px;
+  flex-wrap: wrap;
+  overflow: auto;
 }
 
-#genre p {
-  padding: 10px;
-  margin: 0px 10px;
-  border-radius: 20px;
-  border-style: solid;
-  border-color: yellow;
-  background-color: black;
-  color: white;
+#bookmark-list .poster {
+  padding: 30px;
+}
+
+.poster-images {
+  width: 200px;
+  height: 300px;
+  border: 1px solid black;
+}
+
+.poster-titles {
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: bold;
+  color: black;
+  background-color: none;
+  text-decoration: none;
 }
 
 ::-webkit-scrollbar {
