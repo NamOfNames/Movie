@@ -3,9 +3,9 @@ id = id.replace("title", "");
 id = id.replace("//", "");
 id = id.replace("/", "");
 
-const DEFAULT_VALUE = ""
+const DEFAULT_VALUE = "";
 const movieImage = document.querySelector(".movie-image");
-const movieType = document.querySelector(".movie-type")
+const movieType = document.querySelector(".movie-type");
 const movieYear = document.querySelector(".movie-year");
 const movieTitle = document.querySelector(".movie-title");
 const movieTime = document.querySelector(".movie-running-time");
@@ -15,12 +15,15 @@ const moviePlot = document.querySelector(".movie-plot");
 const account = document.getElementById("account");
 const login = document.getElementById("login");
 const bookmarkMovie = document.querySelector(".bookmark");
+const Storage_1 = [];
+const Storage_2 = [];
+const FinalStorage = [];
 const poster = null;
 
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "249b7d4a1fmsh02265fcc82d41c8p1408a6jsneea72256e519",
+    "X-RapidAPI-Key": "83fcb7fadfmshe81b9904851bb6dp18240bjsne87fa9e95105",
     "X-RapidAPI-Host": "imdb8.p.rapidapi.com",
   },
 };
@@ -37,8 +40,13 @@ function output() {
       movieTitle.innerHTML = data.title || DEFAULT_VALUE;
       movieYear.innerHTML = data.year || DEFAULT_VALUE;
       movieTime.innerHTML = data.runningTimeInMinutes || DEFAULT_VALUE;
-      movieType.innerHTML = data.titleType
+      movieType.innerHTML = data.titleType;
       movieImage.src = data.image.url || DEFAULT_VALUE;
+      Storage_1.push(id);
+      Storage_2.push(data.title);
+      Storage_2.push(data.image.url);
+      FinalStorage.push(Storage_1);
+      FinalStorage.push(Storage_2);
     });
   fetch(
     `https://imdb8.p.rapidapi.com/title/get-plots?tconst=${JSON.parse(
@@ -75,7 +83,7 @@ function output() {
         genre.innerText = data[i];
         document.getElementById("genre").append(genre);
       }
-          });
+    });
 }
 
 function moveInfo() {
@@ -107,10 +115,10 @@ bookmarkMovie.addEventListener("click", function onClikc() {
       bookmarkMovie.style.cssText == ""
     ) {
       bookmarkMovie.style.fill = "yellow";
-      SaveBookmark(id);
+      SaveBookmark(FinalStorage);
     } else {
       bookmarkMovie.style.fill = "black";
-      DeleteBookmark(id);
+      DeleteBookmark(FinalStorage);
     }
   } else {
     alert("Please log in to use the bookmark function");
@@ -125,7 +133,7 @@ function SaveBookmark(data) {
   var a = [];
   a = JSON.parse(localStorage.getItem("Bookmark")) || [];
   a.push(data);
-        localStorage.setItem("Bookmark", JSON.stringify(a));
+  localStorage.setItem("Bookmark", JSON.stringify(a));
 }
 
 function DeleteBookmark(data) {
