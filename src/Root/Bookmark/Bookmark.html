@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie database</title>
-    <link rel="stylesheet" href="./Bookmark.css" />
+    <link rel="stylesheet" href="/src/Root/subStyle.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -17,9 +17,15 @@
   <body onload="Account_login(); Output_Bookmark()">
     <nav>
       <div class="main-bar">
-        <a href="../index.html">Movies</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact Us</a>
+        <a href="/src/Root/Movie/Movie.html">Movies</a>
+        <a href="/src/Root/TV Series/TvSeries.html">TV Series</a>
+        <div class="dropdown">
+          <p class="dropbtn">More</p>
+          <div class="dropdown-content dropdown-right">
+            <a href="/src/Root/AboutUs/AboutUs.html">About Us</a>
+            <a href="/src/Root/ContactUs/ContactUs.html">Contact Us</a>
+          </div>
+        </div>
       </div>
       <div class="extra-bar">
         <a id="login" href="/src/Auth/Login/Login.html">Login</a>
@@ -41,7 +47,7 @@
         <div id="bookmark-list"></div>
       </div>
     </content>
-    <footer><p></p></footer>
+    <footer><p>© 2023-2023 by NemMovieDatabase.com, Inc.</p></footer>
   </body>
   <script src="./Bookmark.js"></script>
 </html>

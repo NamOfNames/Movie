@@ -3,7 +3,7 @@ const MovieBookmark = document.getElementById("bookmark-list");
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "d93534d06fmshde2150e51c0bfebp1e76a5jsn9d6cfe389f06",
+    "X-RapidAPI-Key": "249b7d4a1fmsh02265fcc82d41c8p1408a6jsneea72256e519",
     "X-RapidAPI-Host": "imdb8.p.rapidapi.com",
   },
 };
@@ -67,6 +67,6 @@ function Account_login() {
 
 function Account_logout() {
   localStorage.setItem("Login", false);
-  location.href = "Info.html";
+  location.href = "Bookmark.html";
   Account_login();
 }

@@ -32,40 +32,21 @@ nav a {
   font-weight: bold;
 }
 
-div .more {
-  font-size: 15px;
-  display: inline-block;
+.main-bar .dropdown {
+  color: white;
+  font-weight: bold;
+  margin-left: 5px;
 }
 
-ul {
-  display: inline;
-  margin: 0;
-  padding: 0;
-}
-ul li {
+.main-bar .dropdown:hover .dropdown-content {
   display: inline-block;
-}
-ul li:hover {
-  background: #555;
-}
-ul li:hover ul {
-  display: block;
-}
-ul li ul {
   position: absolute;
-  display: none;
+  left: 0;
+  min-width: 110px;
 }
-ul li ul li {
-  background: black;
-  display: block;
-}
-ul li ul li a {
-  color: white;
-  text-decoration: none;
-  display: block !important;
-}
-ul li ul li:hover {
-  background: rgb(192, 216, 242);
+
+.dropdown:hover .dropbtn {
+  background-color: #555;
 }
 
 .extra-bar {
@@ -115,18 +96,54 @@ ul li ul li:hover {
   background-color: #555;
 }
 
-.info-wrapper {
+.main-body {
+  padding: 3%;
+  color: white;
+}
+
+.main-body .header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.main-body .header .main-info .flex {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-body .header .main-info .flex svg {
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.main-body .header .main-info .flex svg:hover {
+  fill: white;
+}
+
+.main-info .mini-info {
   display: flex;
 }
 
-#bookmark-list {
-  display: flex;
-  flex-wrap: wrap;
-  overflow: auto;
+.main-info .mini-info p {
+  padding: 5px;
 }
 
-#bookmark-list .poster {
-  padding: 30px;
+#genre {
+  display: flex;
+  padding: 10px;
+}
+
+#genre p {
+  padding: 10px;
+  margin: 0px 10px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: yellow;
+  background-color: black;
+  color: white;
 }
 
 .poster-images {
@@ -148,7 +165,7 @@ ul li ul li:hover {
   align-items: center;
 }
 
-footer{
+footer {
   background-color: black;
   color: white;
   width: 100%;

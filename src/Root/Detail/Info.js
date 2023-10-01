@@ -3,7 +3,9 @@ id = id.replace("title", "");
 id = id.replace("//", "");
 id = id.replace("/", "");
 
+const DEFAULT_VALUE = ""
 const movieImage = document.querySelector(".movie-image");
+const movieType = document.querySelector(".movie-type")
 const movieYear = document.querySelector(".movie-year");
 const movieTitle = document.querySelector(".movie-title");
 const movieTime = document.querySelector(".movie-running-time");
@@ -18,7 +20,7 @@ const poster = null;
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "d93534d06fmshde2150e51c0bfebp1e76a5jsn9d6cfe389f06",
+    "X-RapidAPI-Key": "249b7d4a1fmsh02265fcc82d41c8p1408a6jsneea72256e519",
     "X-RapidAPI-Host": "imdb8.p.rapidapi.com",
   },
 };
@@ -35,6 +37,7 @@ function output() {
       movieTitle.innerHTML = data.title || DEFAULT_VALUE;
       movieYear.innerHTML = data.year || DEFAULT_VALUE;
       movieTime.innerHTML = data.runningTimeInMinutes || DEFAULT_VALUE;
+      movieType.innerHTML = data.titleType
       movieImage.src = data.image.url || DEFAULT_VALUE;
     });
   fetch(
@@ -72,7 +75,7 @@ function output() {
         genre.innerText = data[i];
         document.getElementById("genre").append(genre);
       }
-    });
+          });
 }
 
 function moveInfo() {
@@ -122,7 +125,7 @@ function SaveBookmark(data) {
   var a = [];
   a = JSON.parse(localStorage.getItem("Bookmark")) || [];
   a.push(data);
-  localStorage.setItem("Bookmark", JSON.stringify(a));
+        localStorage.setItem("Bookmark", JSON.stringify(a));
 }
 
 function DeleteBookmark(data) {

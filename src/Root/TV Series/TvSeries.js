@@ -21,24 +21,31 @@ searchInput.addEventListener("change", (event) => {
     .then((response) => response.json())
     .then((data) => {
       movieList.innerHTML = "";
-      for (let i = 0; i < data.results.length; i++) {
+      types = [];
+      length = data.results.length;
+      for (let i = 0; i < length; i++) {
+        if (data.results[i].titleType == "tvSeries") {
+          types.push(data.results[i]);
+        }
+      }
+      for (let i = 0; i < types.length; i++) {
         const images = document.createElement("img");
         const titles = document.createElement("button");
         const list = document.createElement("a");
         list.id = i;
-        titles.id = data.results[i].id;
-        titles.innerText = data.results[i]["title"];
-        images.src = data.results[i].image.url;
+        titles.id = types[i].id;
+        titles.innerText = types[i]["title"];
+        images.src = types[i].image.url;
         titles.classList.add("poster-titles");
         images.classList.add("poster-images");
         list.classList.add("poster");
         document.getElementById("movies-list").append(list);
         document.getElementById([i]).append(images);
         document.getElementById([i]).append(titles);
-        movieID = document.getElementById(data.results[i].id);
+        movieID = document.getElementById(types[i].id);
         let link = document.getElementById([i]);
         link.addEventListener("click", () => {
-          let id = JSON.stringify(data.results[i].id);
+          let id = JSON.stringify(types[i].id);
           localStorage.setItem("id_firm", id);
           link.href = "../Root/Detail/Info.html";
         });
@@ -63,6 +70,6 @@ function Account_login() {
 
 function Account_logout() {
   localStorage.setItem("Login", false);
-  location.href = "index.html";
+  location.href = "TvSeries.html";
   Account_login();
 }
