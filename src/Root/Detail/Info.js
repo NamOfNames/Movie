@@ -148,8 +148,14 @@ function DeleteBookmark(data) {
 }
 
 function Bookmark() {
+  flag = false;
   bookmark_movies = JSON.parse(localStorage.getItem("Bookmark"));
-  if (bookmark_movies.includes(id)) {
+  for (let i = 0; i < bookmark_movies.length; i++) {
+    if (id == bookmark_movies[i][0][0]) {
+      flag = true;
+    }
+  }
+  if (flag) {
     bookmarkMovie.style.fill = "yellow";
   } else {
     bookmarkMovie.style.fill = "black";
