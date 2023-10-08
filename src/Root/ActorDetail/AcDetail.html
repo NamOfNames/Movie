@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us</title>
+    <title>Movie database</title>
     <link rel="Icon" type="Image-Icon" href="/assets/images/Icon.png" />
-    <link rel="stylesheet" href="/src/Root/subStyle.css" />
-    <link rel="stylesheet" href="./AboutUs.css" />
+    <link rel="stylesheet" href="./AcDetail.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -16,7 +15,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body onload="Account_login()">
+  <body onload="output(); Account_login()">
     <nav>
       <div class="main-bar">
         <a href="/src/Root/Movie/Movie.html">Movies</a>
@@ -45,26 +44,30 @@
       </div>
     </nav>
     <div class="main-body">
-      <p class="Information">
-        Chào mừng bạn đến với NemMovieDatabase, tại NemMovieDatabase, tôi cũng
-        đam mê phim ảnh, giống như bạn. Sứ mệnh của chúng tôi là cung cấp một
-        nền tảng toàn diện và thân thiện với người dùng, nơi những người đam mê
-        điện ảnh thuộc mọi thể loại có thể khám phá, khám phá và tôn vinh sự kỳ
-        diệu của điện ảnh. Cho dù bạn là một người xem phim bình thường, một
-        người mê điện ảnh tận tâm hay một nhà làm phim đang tìm kiếm nguồn cảm
-        hứng, chúng tôi đều có thể hỗ trợ bạn. Được thành lập bởi một người yêu
-        thích phim, NemMovieDatabase ra đời từ tình yêu chung dành cho màn bạc.
-        Tôi nhận ra rằng mặc dù có vô số bộ phim đang chờ bạn khám phá nhưng
-        việc tìm kiếm bộ phim hoàn hảo phù hợp với tâm trạng, dịp hoặc sở thích
-        của bạn có thể là một nhiệm vụ khó khăn. Đó là nơi chúng tôi đến. Những
-        gì chúng tôi cung cấp Cơ sở dữ liệu phim mở rộng: Trang web của chúng
-        tôi tự hào có cơ sở dữ liệu phim rộng lớn và được cập nhật liên tục từ
-        mọi thể loại, thời đại và mọi ngóc ngách trên thế giới.
-      </p>
+      <div class="header">
+        <div class="main-info">
+          <h1 class="actor-name"></h1>
+        </div>
+      </div>
+      <br /><br>
+      <div class="body">
+        <img width="300px" class="actor-image" src="" alt="" />
+        <div class="actor-info">
+          <p>Born: <span class="birthdate"></span></p>
+          <br>
+          <p>Birthplace: <span class="birthplace"></span></p>
+          <br>
+          <p>Gender: <span class="actor-gender"></span></p>
+          <br>
+          <p>Height: <span class="actor-height"></span>cm</p>
+          <br>
+          <p class="actor-bio">MiniBio: <span class="bio"></span></p>
+        </div>
+      </div>
     </div>
     <footer>
       <p>© 2023-2023 by NemMovieDatabase.com, Inc.</p>
     </footer>
   </body>
-  <script src="./AboutUs.js"></script>
+  <script src="./AcDetail.js"></script>
 </html>

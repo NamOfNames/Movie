@@ -20,10 +20,11 @@ searchInput.addEventListener("change", (event) => {
   )
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       movieList.innerHTML = "";
       WatchMovie = [];
       for (let i = 0; i < data.results.length; i++) {
-        if (data.results[i].title !== undefined) {
+        if (data.results[i].name !== undefined) {
           WatchMovie.push(data.results[i]);
         }
       }
@@ -32,8 +33,8 @@ searchInput.addEventListener("change", (event) => {
         const titles = document.createElement("button");
         const list = document.createElement("a");
         list.id = i;
-        titles.id = WatchMovie[i].id;
-        titles.innerText = WatchMovie[i]["title"];
+        titles.id = WatchMovie[i].name;
+        titles.innerText = WatchMovie[i]["name"];
         images.src = WatchMovie[i].image.url;
         titles.classList.add("poster-titles");
         images.classList.add("poster-images");
@@ -45,8 +46,8 @@ searchInput.addEventListener("change", (event) => {
         let link = document.getElementById([i]);
         link.addEventListener("click", () => {
           let id = JSON.stringify(WatchMovie[i].id);
-          localStorage.setItem("id_firm", id);
-          link.href = "../Root/Detail/Info.html";
+          localStorage.setItem("name_firm", id);
+          link.href = "../ActorDetail/AcDetail.html";
         });
       }
     });
